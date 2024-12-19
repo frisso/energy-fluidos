@@ -1,6 +1,8 @@
 FROM python:latest
 
-#RUN git clone https://github.com/frisso/energy-fluidos.git
+RUN apt update
+RUN apt -y install python3-lxml
+
 COPY energy-fluidos/code/energy.py .
 
 CMD ./energy.py
